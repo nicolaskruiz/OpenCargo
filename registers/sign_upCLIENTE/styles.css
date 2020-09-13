@@ -12,8 +12,8 @@ body{
 
 .container img {
     width: 800px;
-    position: absolute;
-    top: 147px;
+    position: relative;
+    top: -15px;
     left: 500px;
     border-radius: 20px;
 }
