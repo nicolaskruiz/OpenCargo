@@ -15,15 +15,23 @@
 }
 
 .pedido {
-    margin-top: -40px;
-    margin-right: 250px;
-    position: absolute;
+    margin-top: -60px;
+    margin-left: 1000px;
+    position: relative;
+    height: 100px;
+    width: 200px;
 }
 
+.container{
+    align-items: center;
+}
 .nav-link{
     margin-bottom: -30px;
     margin-left: 10px;
 }
-.card {
-    margin-left: -60px;
+.card-columns {
+    width: 1000px;
+    margin-left: 150px;
+    margin-right: 100px;
 }
+
