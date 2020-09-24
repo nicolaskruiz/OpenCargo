@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Post de viaje</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="estiloForm.css" type="text/css">
+
+</head>
+
+<body>
+    <div class="contact-in" id="app">
+
+        <div class="contact-form">
+            <h1>Nuevo viaje</h1>
+            <textarea placeholder="¿Hacia dónde viajarás, '+name+'?" class="contact-form-textarea"></textarea>
+
+            <form>
+                <label for="Espaciodisponible" class="input-contenedor">Disponibilidad de espacio</label>
+                <select name="Disponibilidad" class="contact-form-txt">
+                    <option value="100">Completamente vacio</option>
+                    <option value="50">Media carga</option>
+                    <option value="10">Paquetes pequeños</option>
+                </select>
+
+
+                <div>
+                    <label for="lugarDestino" class="input-contenedor">Lugar de destino</label>
+                    <select name="lugarDestino" class="contact-form-txt" v-model="seleccion">
+                        <option disabled value="">Seleccione un destino</option>
+                        <option>Resistencia</option>
+                        <option>Villa Angela</option>
+                        <option>Juan Jose Castelli</option>
+                        <option>Villa Río Bermejito</option>
+                        <option>Tres Isletas</option>
+                        <option>Miraflores</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fechainicio">Fecha de inicio</label>
+                    <input type="date" name="fechaInicio">
+
+                    <label for="fechaDestino">Fecha de destino</label>
+                    <input type="date" name="fechaDestino">
+
+                </div>
+
+            </form>
+        </div>
+        <div class="contact-map">
+            <iframe :src="Mapa" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen=""
+                aria-hidden="false" tabindex="0"></iframe>
+
+        </div>
+        <input type="submit" value="Publicar" class="contact-form-btn">
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            //variables y constantes
+            data() {
+                return {
+                    seleccion: '',
+                }
+            },
+            computed: {
+                //funciones computadas
+                Mapa() {
+                    if (this.seleccion === "Resistencia") {
+                        return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113289.01073718106!2d-59.06538604333221!3d-27.460491656226733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450c62a6f5f70b%3A0xf03ac86511c2cd6d!2sResistencia%2C%20Chaco!5e0!3m2!1ses-419!2sar!4v1600567523156!5m2!1ses-419!2sar"
+                    }else if (this.seleccion === "Villa Angela") {
+                        return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28293.124926768793!2d-60.737911844392485!3d-27.573661960949615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9447a9b6238452b5%3A0x114ee7641418f02f!2sVilla%20Angela%2C%20Chaco!5e0!3m2!1ses-419!2sar!4v1600567647437!5m2!1ses-419!2sar"
+                    }else if (this.seleccion === "Juan Jose Castelli") {
+                        return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14350.93434916761!2d-60.63288477696929!3d-25.943971041547027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94404cf9ea05d33d%3A0xbace435b51c59cb5!2sCastelli%2C%20Chaco!5e0!3m2!1ses-419!2sar!4v1600567709094!5m2!1ses-419!2sar"
+                    }else if (this.seleccion === "Villa Río Bermejito"){
+                        return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14388.294018636501!2d-60.271172827111!3d-25.635685843551798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9441c3c99b615c79%3A0xae0047dba9b953c8!2sVilla%20R%C3%ADo%20Bermejito%2C%20Chaco!5e0!3m2!1ses-419!2sar!4v1600614641058!5m2!1ses-419!2sar"
+                    }else if (this.seleccion === "Tres Isletas"){
+                        return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28605.11770699681!2d-60.444985746753105!3d-26.33816352543714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94411a5800f86977%3A0xbae78ab55ca6b812!2sTres%20Isletas%2C%20Chaco!5e0!3m2!1ses-419!2sar!4v1600616378882!5m2!1ses-419!2sar"
+                    }else if (this.seleccion === "Miraflores"){
+                        return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28773.367837867416!2d-60.94218169803204!3d-25.64904326903155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94402217835ae817%3A0x5e29ffd7bedba241!2sMiraflores%2C%20Chaco!5e0!3m2!1ses-419!2sar!4v1600616969342!5m2!1ses-419!2sar"
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

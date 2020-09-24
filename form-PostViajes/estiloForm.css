@@ -1,0 +1,113 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 80%;
+    display: grid;
+    align-items: center;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.contact-in{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px 0px #0f0c29; 
+}
+
+.contact-map{
+    width: auto;
+    height:auto ;
+    flex: 40%;
+    margin-left: 10px;
+}
+.contact-map iframe{
+    width: 100%;
+    height:100%;
+}
+
+.contact-form{
+    width: 100%;
+    height:auto ;
+    flex: 50%;
+    text-align: center;
+}
+.contact-form h1{
+    margin-bottom: 10px;
+    
+}
+.contact-form-txt{
+    width: 100%;
+    height:50px ;
+    color: #0f0c29;
+    border-radius: 50px;
+    outline: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 16px;
+}
+.contact-form-txt::placeholder{
+    color: #24243e;
+}
+
+.contact-form-textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height:130px ;
+    color: #0f0c29;
+    border-radius: 20px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.contact-form-textarea{
+    color: #24243e;
+}
+
+.contact-form-btn{
+    width: 20%;
+    height: 30px;
+    border:none;
+    outline: none;
+    border-radius: 20px;
+    margin-top: 50px;
+    background: #302b63;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px, 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.form{
+    width: 100%;
+    height: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.input-contenedor{
+    width: 100%;
+    height: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
