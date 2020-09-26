@@ -1,7 +1,8 @@
 body{
     background: url(hombre_entregando_paquete_en_auto.jpg);
-    background-size: 110%;
-    background-position: ;
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    background-position-y: 60px;
 } 
 .display-5{
     color: #5F799A;
